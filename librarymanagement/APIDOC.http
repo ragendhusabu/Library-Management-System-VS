@@ -1,0 +1,112 @@
+
+
+### GET ALL BOOKS
+GET http://127.0.0.1:8000/books/
+Accept: application/json
+
+
+### POST - ADD BOOK
+POST http://127.0.0.1:8000/books/
+Content-Type: application/json
+
+{
+    "book_name": "The Alchemist",
+    "author_name": "Paulo Coelho",
+    "category": "Fiction",
+    "published_year": 1988,
+    "total_copies": 10,
+    "available_copies": 10
+}
+
+
+### GET BOOK BY ID
+GET http://127.0.0.1:8000/books/2/
+Accept: application/json
+
+
+### PUT - UPDATE BOOK
+PUT http://127.0.0.1:8000/books/4/
+Content-Type: application/json
+
+{
+    "book_name": "The Alchemist",
+    "author_name": "Paulo Coelho",
+    "category": "Fiction",
+    "published_year": 1988,
+    "total_copies": 15,
+    "available_copies": 10
+}
+
+
+### DELETE BOOK
+DELETE http://127.0.0.1:8000/books/4/
+
+
+
+### GET ALL MEMBERS
+GET http://127.0.0.1:8000/members/
+Accept: application/json
+
+
+### POST - REGISTER MEMBER
+POST http://127.0.0.1:8000/members/
+Content-Type: application/json
+
+{
+    "member_name": "Vishnu Prasad",
+    "email": "vishnu.prasad@gmail.com",
+    "phone": "9876543215",
+    "address": "Kozhikode, Kerala"
+}
+
+
+### GET MEMBER BY ID
+GET http://127.0.0.1:8000/members/1/
+Accept: application/json
+
+
+### PUT - UPDATE MEMBER
+PUT http://127.0.0.1:8000/members/1/
+Content-Type: application/json
+
+{
+    "member_name": "Anjali Thomas",
+    "email": "anjali.thomas@gmail.com",
+    "phone": "9876543211",
+    "address": "Kollam, Kerala"
+}
+
+
+### DELETE MEMBER
+DELETE http://127.0.0.1:8000/members/1/
+
+
+### GET ALL BORROW RECORDS
+GET http://127.0.0.1:8000/borrow/
+Accept: application/json
+
+
+### POST - ISSUE BOOK
+POST http://127.0.0.1:8000/borrow/
+Content-Type: application/json
+
+{
+    "book_id": 2,
+    "member_id": 2
+}
+
+
+### GET BORROW RECORD BY ID
+GET http://127.0.0.1:8000/borrow/2/
+Accept: application/json
+
+
+### PUT - RETURN BOOK
+PUT http://127.0.0.1:8000/borrow/2/
+Content-Type: application/json
+
+{}
+
+
+### DELETE BORROW RECORD
+DELETE http://127.0.0.1:8000/borrow/1/
